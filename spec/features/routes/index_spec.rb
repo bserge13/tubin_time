@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe "routes", type: :feature do
+RSpec.describe "routes", type: :feature do 
   describe "it exists" do
-    it "has a route" do
+    it "has a route", :vcr do
       visit root_path
 
       expect(current_path).to eq(root_path)
