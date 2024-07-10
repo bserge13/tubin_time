@@ -7,7 +7,7 @@ class Route < ApplicationRecord
     elsif current_flow < flow_min
       "Low"
     else
-      "Safe to Tube"
+      "Safe to send, breh"
     end
   end
 
