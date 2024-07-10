@@ -12,6 +12,6 @@ class Route < ApplicationRecord
   end
 
   def current_flow
-    RouteFacade.get_current_flow(address)
+    RouteFacade.get_current_flow(site_code)
   end
 end

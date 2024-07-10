@@ -9,4 +9,4 @@
 #   end
 
 
-Route.create(title: "Chatfield to Breck Brewing", address: "8056 S Platte Canyon Rd", city: "Littleton", state: "CO", flow_max: 500, flow_min: 100)
+Route.create(title: "Chatfield to Breck Brewing", address: "8056 S Platte Canyon Rd", city: "Littleton", state: "CO", flow_max: 500, flow_min: 100, site_code: "06620000")
