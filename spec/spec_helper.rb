@@ -91,4 +91,18 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  config.before(:suite) do
+    # Ensure no lingering connections before the test suite runs
+    ActiveRecord::Base.connection.disconnect!
+  end
+
+  config.before(:suite) do
+    Rails.application.load_seed # Loading the seeds from db/seeds.rb
+  end
+
+  config.after(:suite) do
+    # Ensure all connections are closed after the test suite runs
+    ActiveRecord::Base.connection.disconnect!
+  end
 end

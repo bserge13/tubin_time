@@ -1,0 +1,1713 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/&sites=06620000?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:17:17 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - text/html;charset=UTF-8
+      Set-Cookie:
+      - JSESSIONID=05B42D3B83CB4B21DF3BE67D1EE617D7; Path=/nwis/iv; HttpOnly
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:32:18 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Content-Length:
+      - '1118'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html
+        xmlns="http://www.w3.org/1999/xhtml"><head><title>Error report</title><style
+        type="text/css"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+        H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+        H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+        BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
+        B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+        P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+        {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status
+        400 - no major-filter pairs supplied by user, server=[vaas01]</h1><hr/><p><b>type</b>
+        Status report</p><p><b>message</b>no major-filter pairs supplied by user,
+        server=[vaas01]</p><p><b>description</b>The request sent by the client was
+        syntactically incorrect.</p><hr/><h3>Error Report</h3></body></html>'
+  recorded_at: Wed, 10 Jul 2024 23:17:18 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:20:44 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:35:45 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:20:45.668Z","title":"requestDT"},{"value":"08d1cb30-3f13-11ef-b8fc-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:20:45 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:47 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:47 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:47.789Z","title":"requestDT"},{"value":"d556e6c0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:47 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:47 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:47 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:47.999Z","title":"requestDT"},{"value":"d576f1e0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:47 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:47 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:48 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:48.216Z","title":"requestDT"},{"value":"d5983580-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:48 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:48 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:48.431Z","title":"requestDT"},{"value":"d5b8dce0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:48 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:48 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:48.636Z","title":"requestDT"},{"value":"d5d824b0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:48 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:48 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:48.819Z","title":"requestDT"},{"value":"d5f41120-3f15-11ef-a6f8-2cea7f5e5ede","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"sdas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:48 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:48 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:49.003Z","title":"requestDT"},{"value":"d61024a0-3f15-11ef-a6f8-2cea7f5e5ede","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"sdas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:48 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:49 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:49.355Z","title":"requestDT"},{"value":"d645daa0-3f15-11ef-a6f8-2cea7f5e5ede","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"sdas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:49 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:49 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:49 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:49.539Z","title":"requestDT"},{"value":"d661ee20-3f15-11ef-a6f8-2cea7f5e5ede","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"sdas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:49 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:49 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:49 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:49.730Z","title":"requestDT"},{"value":"d67f1310-3f15-11ef-a6f8-2cea7f5e5ede","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"sdas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:49 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:49 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:49 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:49.957Z","title":"requestDT"},{"value":"d6a1b640-3f15-11ef-b8fc-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:49 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:50 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:50 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:50.189Z","title":"requestDT"},{"value":"d6c51cc0-3f15-11ef-b8fc-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:50 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:50 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:50 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:50.702Z","title":"requestDT"},{"value":"d7138ae0-3f15-11ef-b8fc-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:50 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:50 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:50 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:50.930Z","title":"requestDT"},{"value":"d7362e10-3f15-11ef-b8fc-2cea7f58f5ca","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"vaas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:50 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:50 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:51 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:51.147Z","title":"requestDT"},{"value":"d7574aa0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:51 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:50 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:51 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:51.355Z","title":"requestDT"},{"value":"d77707a0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:51 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:51 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:51 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:51.551Z","title":"requestDT"},{"value":"d794efe0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:51 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:51 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:51 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:51.765Z","title":"requestDT"},{"value":"d7b59740-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:51 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:51 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:51 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:51.975Z","title":"requestDT"},{"value":"d7d5a260-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:51 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:51 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:52 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:52.207Z","title":"requestDT"},{"value":"d7f908e0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:52 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:51 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:52 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:52.402Z","title":"requestDT"},{"value":"d816ca10-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:52 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:52 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:52.608Z","title":"requestDT"},{"value":"d83638f0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:52 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:52 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:52.812Z","title":"requestDT"},{"value":"d85559b0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:52 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:52 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:53.020Z","title":"requestDT"},{"value":"d87516b0-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:52 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:53 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:53.225Z","title":"requestDT"},{"value":"d8945e80-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:53 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:53 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:53.434Z","title":"requestDT"},{"value":"d8b44290-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:53 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:53 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:53 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:53.641Z","title":"requestDT"},{"value":"d8d3ff90-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:53 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:53 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:53 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:53.862Z","title":"requestDT"},{"value":"d8f59150-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:53 GMT
+- request:
+    method: get
+    uri: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06620000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Jul 2024 23:40:53 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=900
+      Expires:
+      - Wed, 10 Jul 2024 23:55:54 GMT
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - deny
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"ns1:timeSeriesResponseType","declaredType":"org.cuahsi.waterml.TimeSeriesResponseType","scope":"javax.xml.bind.JAXBElement$GlobalScope","value":{"queryInfo":{"queryURL":"http://waterservices.usgs.gov/nwis/iv/format=json&sites=06620000","criteria":{"locationParam":"[ALL:06620000]","variableParam":"ALL","parameter":[]},"note":[{"value":"[ALL:06620000]","title":"filter:sites"},{"value":"[mode=LATEST,
+        modifiedSince=null]","title":"filter:timeRange"},{"value":"methodIds=[ALL]","title":"filter:methodId"},{"value":"2024-07-10T23:40:54.071Z","title":"requestDT"},{"value":"d9159c70-3f15-11ef-b865-005056beda50","title":"requestId"},{"value":"Provisional
+        data are subject to revision. Go to http://waterdata.usgs.gov/nwis/help/?provisional
+        for more information.","title":"disclaimer"},{"value":"caas01","title":"server"}]},"timeSeries":[{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00060","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807197,"default":true}],"variableName":"Streamflow,
+        ft&#179;/s","variableDescription":"Discharge, cubic feet per second","valueType":"Derived
+        Value","unit":{"unitCode":"ft3/s"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807197"},"values":[{"value":[{"value":"331","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":162590}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00060:00000"},{"sourceInfo":{"siteName":"NORTH
+        PLATTE RIVER NEAR NORTHGATE, CO","siteCode":[{"value":"06620000","network":"NWIS","agencyCode":"USGS"}],"timeZoneInfo":{"defaultTimeZone":{"zoneOffset":"-07:00","zoneAbbreviation":"MST"},"daylightSavingsTimeZone":{"zoneOffset":"-06:00","zoneAbbreviation":"MDT"},"siteUsesDaylightSavingsTime":true},"geoLocation":{"geogLocation":{"srs":"EPSG:4326","latitude":40.93663889,"longitude":-106.3391944},"localSiteXY":[]},"note":[],"siteType":[],"siteProperty":[{"value":"ST","name":"siteTypeCd"},{"value":"10180001","name":"hucCd"},{"value":"08","name":"stateCd"},{"value":"08057","name":"countyCd"}]},"variable":{"variableCode":[{"value":"00065","network":"NWIS","vocabulary":"NWIS:UnitValues","variableID":45807202,"default":true}],"variableName":"Gage
+        height, ft","variableDescription":"Gage height, feet","valueType":"Derived
+        Value","unit":{"unitCode":"ft"},"options":{"option":[{"name":"Statistic","optionCode":"00000"}]},"note":[],"noDataValue":-999999.0,"variableProperty":[],"oid":"45807202"},"values":[{"value":[{"value":"2.93","qualifiers":["P"],"dateTime":"2024-07-10T16:45:00.000-06:00"}],"qualifier":[{"qualifierCode":"P","qualifierDescription":"Provisional
+        data subject to revision.","qualifierID":0,"network":"NWIS","vocabulary":"uv_rmk_cd"}],"qualityControlLevel":[],"method":[{"methodDescription":"","methodID":227094}],"source":[],"offset":[],"sample":[],"censorCode":[]}],"name":"USGS:06620000:00065:00000"}]},"nil":false,"globalScope":true,"typeSubstituted":false}'
+  recorded_at: Wed, 10 Jul 2024 23:40:53 GMT
+recorded_with: VCR 6.2.0
