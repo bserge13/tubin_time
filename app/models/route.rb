@@ -1,5 +1,6 @@
 class Route < ApplicationRecord
-  validates :title, :address, :city, :state, :flow_max, :flow_min, presence: true
+  validates :title, :address, :city, :state, presence: true
+  validates :flow_max, :flow_min, presence: true, numericality: true
 
   def status
     if current_flow > flow_max

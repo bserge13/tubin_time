@@ -8,6 +8,8 @@ RSpec.describe Route, type: :model do
         it { should validate_presence_of :state }
         it { should validate_presence_of :flow_max }
         it { should validate_presence_of :flow_min }
+        it { should validate_numericality_of :flow_max }
+        it { should validate_numericality_of :flow_min }
     end
 
     describe '#instance_method' do 
