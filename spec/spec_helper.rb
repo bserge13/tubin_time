@@ -4,6 +4,7 @@
 # this file to always be loaded, without a need to explicitly require it in any
 # files.
 require 'webmock/rspec'
+require 'database_cleaner-active_record'
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run, even for an
@@ -98,9 +99,19 @@ RSpec.configure do |config|
   end
 
   config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean_with(:truncation)
     Rails.application.load_seed # Loading the seeds from db/seeds.rb
   end
 
+  config.before(:each) do 
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+  
   config.after(:suite) do
     # Ensure all connections are closed after the test suite runs
     ActiveRecord::Base.connection.disconnect!

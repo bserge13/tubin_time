@@ -1,6 +1,7 @@
 class RoutesController < ApplicationController
   def index
     @routes = Route.all
+    require 'pry'; binding.pry
   end
 
   ## save this 'show for after MVP to show details of a route
