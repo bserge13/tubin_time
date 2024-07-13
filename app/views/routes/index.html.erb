@@ -1,7 +1,7 @@
 <h1>Welcome to TubinTime</h1>
-<p>Here are the routes</p>
+<p><h2>Here are the routes:</h2></p>
 
 <% @routes.each do |route| %>
-  <p>Title: <%= route.title %></p>
-  <p>Status: <%= route.status %>
+  <li>Title: <%= route.title %>
+  <ul>Status: <%= route.status %>
 <% end %>
